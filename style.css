@@ -243,7 +243,7 @@ header {
     justify-content: center;
   }
 
-  /* ===== HERO MOBILE FIX ===== */
+  /* ===== HERO MOBILE ===== */
   .hero {
     height: 100vh;
   }
@@ -257,7 +257,6 @@ header {
     padding-bottom: 20px;
   }
 
-  /* نوسینەکان لەسەر وێنە */
   .text.left,
   .text.right {
     position: static;
@@ -282,12 +281,11 @@ header {
     opacity: 0.8;
   }
 
-  /* وێنە */
   .image {
     position: relative;
     height: 65vh;
     margin-top: 30px;
-    display: flex;
+display: flex;
     justify-content: center;
     align-items: flex-end;
   }
@@ -298,7 +296,6 @@ header {
     object-fit: contain;
   }
 
-  /* grids */
   .work-grid {
     grid-template-columns: 1fr;
   }
@@ -306,6 +303,4 @@ header {
   .contact-wrapper {
     grid-template-columns: 1fr;
   }
-
 }
-  }
