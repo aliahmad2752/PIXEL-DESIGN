@@ -284,3 +284,59 @@ header {
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   HERO MOBILE FIX ONLY
+   ========================= */
+@media (max-width: 768px) {
+
+  .hero {
+    height: 100vh;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+  }
+
+  /* نوسینەکان لەسەر یەک */
+  .text-wrapper {
+    position: absolute;
+    top: 100px;
+    display: flex;
+    gap: 28px; /* مابەینی نێوان PIXEL و ALI */
+    z-index: 5;
+  }
+
+  .text {
+    position: static;
+    text-align: center;
+  }
+
+  .text h1 {
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  .text h2 {
+    font-size: 16px;
+    opacity: 0.8;
+  }
+
+  /* وێنە */
+  .image {
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .image img {
+    height: 100%;
+    max-width: 90%;
+    object-fit: contain;
+  }
+
+}
