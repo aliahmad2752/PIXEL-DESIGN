@@ -292,7 +292,7 @@ display: flex;
 
   .image img {
     height: 100%;
-    max-width: 90%;
+    max-width: 1000%;
     object-fit: contain;
   }
 
