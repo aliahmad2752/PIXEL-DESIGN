@@ -29,9 +29,7 @@
 <section class="hero">
   <div class="hero-content">
 
-    <!-- texts -->
     <div class="text-wrapper">
-
       <div class="text left">
         <h1>PIXEL</h1>
         <h2>DESIGN</h2>
@@ -41,10 +39,8 @@
         <h1>ALI</h1>
         <h2>AHMAD</h2>
       </div>
-
     </div>
 
-    <!-- image -->
     <div class="image">
       <img src="images/profile.png" alt="Ali Ahmad">
     </div>
@@ -53,50 +49,53 @@
 </section>
 
 <!-- ================= WORK ================= -->
-<section id="work" class="work">
+<section id="work" class="work fade-section">
   <h1>My Work</h1>
 
   <div class="work-grid">
-    <div class="work-item"><img src="images/work1.jpg" alt=""></div>
-    <div class="work-item"><img src="images/work2.jpg" alt=""></div>
-    <div class="work-item"><img src="images/work3.jpg" alt=""></div>
-    <div class="work-item"><img src="images/work4.jpg" alt=""></div>
-    <div class="work-item"><img src="images/work5.jpg" alt=""></div>
-    <div class="work-item"><img src="images/work6.jpg" alt=""></div>
-    <div class="work-item"><img src="images/work7.jpg" alt=""></div>
-    <div class="work-item"><img src="images/work8.jpg" alt=""></div>
-    <div class="work-item"><img src="images/work9.jpg" alt=""></div>
-    <div class="work-item"><img src="images/work10.jpg" alt=""></div>
-    <div class="work-item"><img src="images/work11.jpg" alt=""></div>
-    <div class="work-item"><img src="images/work12.jpg" alt=""></div>
+    <div class="work-item"><img src="images/work1.jpg"></div>
+    <div class="work-item"><img src="images/work2.jpg"></div>
+    <div class="work-item"><img src="images/work3.jpg"></div>
+    <div class="work-item"><img src="images/work4.jpg"></div>
+    <div class="work-item"><img src="images/work5.jpg"></div>
+    <div class="work-item"><img src="images/work6.jpg"></div>
+    <div class="work-item"><img src="images/work7.jpg"></div>
+    <div class="work-item"><img src="images/work8.jpg"></div>
+    <div class="work-item"><img src="images/work9.jpg"></div>
+    <div class="work-item"><img src="images/work10.jpg"></div>
+    <div class="work-item"><img src="images/work11.jpg"></div>
+    <div class="work-item"><img src="images/work12.jpg"></div>
   </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section class="contact" id="contact">
+<section class="contact fade-section" id="contact">
+
   <h1>Contact Me</h1>
 
-  <div class="contact-wrapper">
+  <div class="social-buttons">
+    <a href="https://www.instagram.com/pixel_design16" target="_blank" class="glass-btn insta">Instagram</a>
+    <a href="https://www.facebook.com/share/17t12mfc6x/" target="_blank" class="glass-btn facebook">Facebook</a>
+    <a href="https://www.tiktok.com/@pixel_design2" target="_blank" class="glass-btn tiktok">TikTok</a>
+  </div>
 
-    <div class="contact-info">
-      <p>Let’s work together</p>
-      <p>TikTok:<br><a href="#">@pixel_design2</a></p>
-      <p>Instagram:<br><a href="#">@pixel_design16</a></p>
-      <p>Phone:<br><a href="#">07734233141</a></p>
-    </div>
+  <div class="contact-glass">
+    <h2 class="contact-title">Send Me a Message</h2>
 
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
+    <form id="contactForm" class="glass-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
 
+    <p id="successMsg" class="success-msg">✔️ Message sent successfully</p>
   </div>
+
 </section>
 
 <!-- ================= ABOUT ================= -->
-<section class="about" id="about">
+<section class="about fade-section" id="about">
   <h1>About Me</h1>
 
   <p>
@@ -114,6 +113,39 @@
     strong visuals, and creative branding.
   </p>
 </section>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+/* CONTACT FORM */
+const form = document.getElementById("contactForm");
+const msg = document.getElementById("successMsg");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+
+  await fetch("https://formspree.io/f/mjgkryng", {
+    method: "POST",
+    body: data,
+    headers: { "Accept": "application/json" }
+  });
+
+  form.reset();
+  msg.style.display = "block";
+});
+
+/* FADE ON SCROLL */
+const fadeSections = document.querySelectorAll('.fade-section');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.15 });
+
+fadeSections.forEach(section => observer.observe(section));
+</script>
 
 </body>
 </html>
