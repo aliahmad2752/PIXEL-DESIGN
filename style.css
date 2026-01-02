@@ -510,4 +510,52 @@ header {
     max-width: 90%;
     object-fit: contain;
   }
+}@media (max-width: 768px) {
+
+  header,
+  nav {
+    position: relative;
+    width: 100%;
+  }
+
+  .navbar {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    z-index: 20;
+  }
+
+  /* لۆگۆ + ناو */
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .brand img {
+    width: 34px;
+    height: auto;
+  }
+
+  .brand span {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  /* بەتنەکان */
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
 }
