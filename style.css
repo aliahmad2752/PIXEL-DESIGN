@@ -214,7 +214,7 @@ header {
 
 /* =====================
    📱 MOBILE ONLY
-   (DESKTOP UNTOUCHED)
+   DESKTOP SAFE
 ===================== */
 @media (max-width: 768px) {
 
@@ -243,52 +243,7 @@ header {
     justify-content: center;
   }
 
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    padding-bottom: 20px;
-    gap: 12px;
-  }
-
-  .text {
-    position: static;
-    text-align: center;
-  }
-
-  .text h1 {
-    font-size: 32px;
-  }
-
-  .text h2 {
-    font-size: 18px;
-    opacity: 0.8;
-  }
-
-  .image {
-    position: relative;
-    height: 60vh;
-  }
-
-  .image img {
-    height: 100%;
-    max-width: 90%;
-  }
-
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .work-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* =========================
-   HERO MOBILE FIX ONLY
-   ========================= */
-@media (max-width: 768px) {
-
+  /* ===== HERO MOBILE FIX ===== */
   .hero {
     height: 100vh;
   }
@@ -299,20 +254,22 @@ header {
     justify-content: flex-end;
     align-items: center;
     position: relative;
+    padding-bottom: 20px;
   }
 
-  /* نوسینەکان لەسەر یەک */
-  .text-wrapper {
-    position: absolute;
-    top: 100px;
-    display: flex;
-    gap: 28px; /* مابەینی نێوان PIXEL و ALI */
-    z-index: 5;
-  }
-
-  .text {
+  /* نوسینەکان لەسەر وێنە */
+  .text.left,
+  .text.right {
     position: static;
     text-align: center;
+  }
+
+  .text-wrapper {
+    position: absolute;
+    top: 170px;
+    display: flex;
+    gap: 28px;
+    z-index: 5;
   }
 
   .text h1 {
@@ -327,7 +284,9 @@ header {
 
   /* وێنە */
   .image {
+position: relative;
     height: 65vh;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -337,6 +296,15 @@ header {
     height: 100%;
     max-width: 90%;
     object-fit: contain;
+  }
+
+  /* grids */
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
   }
 
 }
