@@ -351,6 +351,7 @@ header {
   color: white;
   opacity: 0.9;
 }
+</a>
 @media (max-width: 768px) {
 
   body {
@@ -393,4 +394,3 @@ header {
     gap: 10px;
   }
 }
-</a>
