@@ -134,19 +134,64 @@ header {
   background: #0f172a;
 }
 
+.work h1 {
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+
 .work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
+.work-item {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.work-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.work-item:hover img {
+  transform: scale(1.08);
+}
+
 /* =====================
    CONTACT
 ===================== */
+.contact {
+  padding: 120px 8%;
+}
+
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: none;
+}
+
+.contact-form button {
+  padding: 16px;
+  width: 100%;
+  background: #38bdf8;
+  color: #020617;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 /* =====================
@@ -157,9 +202,20 @@ header {
   min-height: 100vh;
 }
 
-/* =====================================================
-   📱 MOBILE ONLY (DESKTOP 100% SAFE)
-===================================================== */
+.about h1 {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* =====================
+   📱 MOBILE ONLY
+   DESKTOP SAFE
+===================== */
 @media (max-width: 768px) {
 
   body {
@@ -193,21 +249,27 @@ header {
   }
 
   .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     position: relative;
-    height: 100%;
+    padding-bottom: 20px;
   }
 
-  /* نوسینەکان – هێنراونە خوارتر */
+  /* نوسینەکان لەسەر وێنە */
   .text.left,
   .text.right {
-    position: absolute;
-    top: 200px;        /* 👈 ئەمە نوسینەکان خوارتر دەهێنێت */
-    width: 100%;
+    position: static;
     text-align: center;
   }
 
-  .text.right {
-    top: 260px;        /* 👈 مابەینی نێوان PIXEL و ALI */
+  .text-wrapper {
+    position: absolute;
+    top: 170px;
+    display: flex;
+    gap: 28px;
+    z-index: 5;
   }
 
   .text h1 {
@@ -220,16 +282,14 @@ header {
     opacity: 0.8;
   }
 
-  /* وێنە – هێنراوە خوارتر */
+  /* وێنە */
   .image {
-    position: absolute;
-    bottom: -80px;     /* 👈 وێنەکە خوارتر چوو */
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     height: 65vh;
+    margin-top: 30px;
     display: flex;
-    align-items: flex-end;
     justify-content: center;
+    align-items: flex-end;
   }
 
   .image img {
@@ -246,4 +306,6 @@ header {
   .contact-wrapper {
     grid-template-columns: 1fr;
   }
+
 }
+  }
