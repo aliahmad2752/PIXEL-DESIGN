@@ -351,4 +351,46 @@ header {
   color: white;
   opacity: 0.9;
 }
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .container,
+  .main,
+  .profile,
+  .content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* ناونیشانە گەورەکان */
+  h1, h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  /* PIXEL DESIGN / ALI AHMAD */
+  .left-text,
+  .right-text {
+    position: static;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  /* وێنە */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  /* ناڤی سەرەوە */
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 </a>
