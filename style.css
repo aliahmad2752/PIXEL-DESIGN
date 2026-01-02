@@ -304,3 +304,4 @@ display: flex;
     grid-template-columns: 1fr;
   }
 }
+.contact a { color: white; }
