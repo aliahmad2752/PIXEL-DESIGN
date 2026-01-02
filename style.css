@@ -284,7 +284,7 @@ header {
 
   /* وێنە */
   .image {
-position: relative;
+    position: relative;
     height: 65vh;
     margin-top: 30px;
     display: flex;
