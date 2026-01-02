@@ -160,7 +160,40 @@ header {
 .work-item:hover img {
   transform: scale(1.08);
 }
+/* =====================
+   MY WORK HORIZONTAL (MOBILE ONLY)
+===================== */
+@media (max-width: 768px) {
 
+  .work-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .work-item {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+  }
+
+  /* جوانتر بۆ موبایل */
+  .work-grid::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .work-grid::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+  }
+}.mywork-btn-wrapper {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: -40px !important;
+  margin-bottom: 40px !important;
+  width: 100% !important;
+}
 /* =====================
    CONTACT
 ===================== */
@@ -492,90 +525,6 @@ display: flex;
 .contact {
   padding: 60px 20px;
 }
-/* ================= FADE ANIMATION ================= */
-.fade-section {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: 0.9s ease;
-}
-
-.fade-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ================= ABOUT BEAUTIFY ================= */
-.about {
-  padding: 140px 8%;
-  min-height: 100vh;
-  background: linear-gradient(160deg, rgba(255,255,255,0.04), transparent);
-  backdrop-filter: blur(8px);
-}
-
-.about h1 {
-  font-size: 52px;
-  margin-bottom: 40px;
-  letter-spacing: 2px;
-}
-
-.about p {
-  max-width: 720px;
-  font-size: 18px;
-  line-height: 1.9;
-  opacity: 0.85;
-  margin-bottom: 22px;
-}
-
-/* ================= SUCCESS MSG ================= */
-.success-msg {
-  display: none;
-  margin-top: 16px;
-  color: #38bdf8;
-}/* =====================
-   ABOUT + CONTACT GRADIENT
-===================== */
-
-.about,
-.contact {
-  position: relative;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(255,140,0,0.18), transparent 45%),
-    radial-gradient(circle at 80% 30%, rgba(56,189,248,0.22), transparent 45%),
-    linear-gradient(160deg, #020617, #0b2c3d);
-  overflow: hidden;
-}
-
-/* نرمی نوسین */
-.about p,
-.contact p {
-  opacity: 0.85;
-}
-
-/* glass card inside contact */
-.contact-glass {
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(14px);
-  border-radius: 22px;
-  padding: 40px;
-  border: 1px solid rgba(255,255,255,0.12);
-}
-
-/* titles */
-.about h1,
-.contact h1,
-.contact-title {
-  letter-spacing: 2px;
-}
-
-/* =====================
-   MOBILE TWEAK
-===================== */
-@media (max-width: 768px) {
-  .about,
-  .contact {
-    background:
-      radial-gradient(circle at 50% 15%, rgba(255,140,0,0.22), transparent 55%),
-      radial-gradient(circle at 50% 85%, rgba(56,189,248,0.25), transparent 55%),
-      linear-gradient(180deg, #020617, #0b2c3d);
-  }
+.work-item::after {
+  content: "";
 }
