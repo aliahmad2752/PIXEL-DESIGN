@@ -193,6 +193,92 @@ header {
   margin-top: -40px !important;
   margin-bottom: 40px !important;
   width: 100% !important;
+}.work-vote {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.tools {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* glass box */
+.tool {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+/* img */
+.tool img {
+  width: 38px;
+  display: block;
+  pointer-events: none; /* زۆر گرنگ */
+}
+
+/* hover + touch */
+.tool:hover,
+.tool:active {
+  transform: translateY(-10px) scale(1.15);
+}
+
+/* 🔵 Photoshop */
+.tool.ps:hover,
+.tool.ps:active {
+  background: radial-gradient(
+    circle at top,
+    rgba(56,189,248,0.5),
+    rgba(255,255,255,0.12)
+  );
+  box-shadow: 0 18px 40px rgba(56,189,248,0.55);
+}
+
+/* 🟠 Illustrator */
+.tool.ai:hover,
+.tool.ai:active {
+  background: radial-gradient(
+    circle at top,
+    rgba(255,140,0,0.5),
+    rgba(255,255,255,0.12)
+  );
+  box-shadow: 0 18px 40px rgba(255,140,0,0.55);
+}
+
+.vote-number {
+  font-size: 18px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.15);
+}/* remove mobile tap highlight */
+.tool {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+/* remove focus ring */
+.tool:focus,
+.tool:focus-visible {
+  outline: none;
+  box-shadow: none;
+}.ps-icon,
+.ai-icon {
+  margin-top: 20px;
+}.tools {
+  margin-top: 20px;
 }
 /* =====================
    CONTACT
@@ -244,7 +330,32 @@ header {
   font-size: 18px;
   line-height: 1.8;
 }
+.about {
+  padding: 100px 20px;
+}
 
+.about-glass {
+  max-width: 700px;
+  padding: 40px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.about-glass h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.about-glass p {
+  line-height: 1.7;
+  opacity: 0.95;
+}
 /* =====================
    📱 MOBILE ONLY
    DESKTOP SAFE
