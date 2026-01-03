@@ -7,7 +7,69 @@ body {
   color: white;
   font-family: Arial, sans-serif;
 }
+/* ===== Back To Top Button ===== */
+#backToTop {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
 
+  width: 58px;
+  height: 58px;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Liquid Glass Gradient */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 165, 0, 0.35),
+    rgba(0, 150, 255, 0.35)
+  );
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+
+  z-index: 9999;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Icon inside button */
+#backToTop img {
+  width: 24px;
+  height: 24px;
+  display: block;
+  pointer-events: none;
+}
+
+/* Hover effect (Desktop) */
+@media (hover: hover) {
+  #backToTop:hover {
+    transform: translateX(-50%) scale(1.08);
+    box-shadow:
+      0 12px 28px rgba(0, 0, 0, 0.35),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  }
+}
+
+/* Active (Tap) */
+#backToTop:active {
+  transform: translateX(-50%) scale(0.95);
+}
 /* =====================
    NAVBAR (DESKTOP)
 ===================== */
